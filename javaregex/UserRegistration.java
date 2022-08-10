@@ -7,6 +7,13 @@ import java.util.regex.Pattern;
 public class UserRegistration {
     static Scanner scanner = new Scanner(System.in);
 
+    /*
+     * @Purpose : Take First Name And Check It Is Getting Matched With Regex/Regular
+     * Expression Or Not
+     *
+     * @param : Name, Regex, Matches
+     */
+
     public static void validFirstName() {
 
         System.out.println("Enter First Name:");
@@ -24,6 +31,13 @@ public class UserRegistration {
 
     }
 
+    /*
+     * @Purpose : Take Last Name And Check It Is Getting Matched With Regex/Regular
+     * Expression Or Not
+     *
+     * @param : Name, Regex, Matches
+     */
+
     public static void validLastName() {
 
         System.out.println("Enter Last Name:");
@@ -40,6 +54,13 @@ public class UserRegistration {
             System.out.println("It Is Invalid Last name");
 
     }
+
+    /*
+     * @Purpose : Take E-Mail Id And Check It Is Getting Matched With Regex/Regular
+     * Expression Or Not
+     *
+     * @param : Name, Regex, Matches
+     */
 
     public static void validEmail() {
 
@@ -60,6 +81,13 @@ public class UserRegistration {
 
     }
 
+    /*
+     * @Purpose : Take Mobile Number And Check It Is Getting Matched With
+     * Regex/Regular Expression Or Not
+     *
+     * @param : Name, Regex, Matches
+     */
+
     public static void validMobileNumber() {
 
         System.out.print("Enter your Mobile Number : ");
@@ -74,6 +102,13 @@ public class UserRegistration {
             System.out.println("Phone Number is Invalid");
     }
 
+    /*
+     * @Purpose : Take Password Atleast 8 Character And Check It Is Getting Matched
+     * With Regex/Regular Expression Or Not
+     *
+     * @param : Name, Regex, Matches
+     */
+
     public static void validPassRule1() {
         System.out.print("Enter The Password Atleast Eight Character : ");
         String passWord = scanner.nextLine();
@@ -86,6 +121,13 @@ public class UserRegistration {
         else
             System.out.println("Password is Invalid");
     }
+
+    /*
+     * @Purpose : Take Password Atleat 1 Numeric Number In Password And Also Check
+     * It Is Getting Matched With Regex/Regular Expression Or Not
+     *
+     * @param : Name, Regex, Matches
+     */
 
     public static void validPassRule2() {
         System.out.print("Enter the Password Atleast One Upper Case & Eight Character :");
@@ -100,6 +142,14 @@ public class UserRegistration {
             System.out.println("Password is Invalid");
     }
 
+    /*
+     * @Purpose : Take Password Atleast One Upper Case Character,Numeric & Eight
+     * Character And Also Check It Is Getting Matched With Regex/Regular Expression
+     * Or Not
+     *
+     * @param : Name, Regex, Matches
+     */
+
     public static void validPassRule3() {
         System.out.println("Enter the Password Atleast One Upper Case & One Numaric");
         String passWord2 = scanner.nextLine();
@@ -113,6 +163,14 @@ public class UserRegistration {
             System.out.println("Password is Invalid");
     }
 
+    /*
+     * @Purpose : Take Password Atleast One Upper Case Character,Numeric,Special
+     * Character & Eight Character And Also Check It Is Getting Matched With
+     * Regex/Regular Expression Or Not
+     *
+     * @param : Name, Regex, Matches
+     */
+
     public static void validPassRule4() {
         System.out.print("Enter the Password Atleast One Upper Case & One Numaric & One Special Character:  ");
         String passWord2 = scanner.next();
@@ -124,5 +182,26 @@ public class UserRegistration {
             System.out.println("Password is Valid");
         else
             System.out.println("Password is Invalid");
+    }
+
+    /*
+     * @Purpose : Take Password Atleast One Upper Case Character,Numeric,Special
+     * Character & Gmail Address & Eight Character And Also Check It Is Getting
+     * Matched With Regex/Regular Expression Or Not
+     *
+     * @param : Name, Regex, Matches
+     */
+
+    public static void emailSamples() {
+        System.out.print("Enter the email : @gmail.com ");
+        String emailSample = scanner.next();
+        String regex6 = "[a-zA-Z0-9_.]*[-]*[+]*[a-zA-Z0-9]*@[a-zA-Z0-9]+([.][a-zA-Z]+)+";
+        Pattern p6 = Pattern.compile(regex6);
+        Matcher m6 = p6.matcher(emailSample);
+        boolean r6 = m6.matches();
+        if (r6)
+            System.out.println("Valid G-mail Address");
+        else
+            System.out.println("Invalid G-mail Address");
     }
 }

@@ -1,5 +1,5 @@
-/*@Purpose:: As a User need to follow pre defined Password Rules
- *Rule3- Should Have Atleat 1 Numeric Number In Password - NOTE – All rules must be passed
+/*@Purpose::As a User need to follow pre defined Password Rules
+ *Should clear all Email samples provided separately
  *@File:: User Registration Using Regex
  *@Author:: Shubham Raj
  */
@@ -25,6 +25,7 @@ public class UserRegistrationMain {
             System.out.println("Enter 7 : To validate Password Rule 3 (Upper Case & One Numeric Number)");
             System.out.println(
                     "Enter 8 : to validate Password Rule 4 (Upper Case & One Numeric Number & One Special Character)");
+            System.out.println("Enter 9 : To validate a Simple Gmail Address");
 
             switch (scanner.nextInt()) {
                 case 0:
@@ -56,6 +57,9 @@ public class UserRegistrationMain {
                     break;
                 case 8:
                     UserRegistration.validPassRule4();
+                    break;
+                case 9:
+                    UserRegistration.emailSamples();
                     break;
 
                 default:
