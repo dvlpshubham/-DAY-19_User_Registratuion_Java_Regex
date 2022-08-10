@@ -1,6 +1,5 @@
-/*@Purpose:: As a User need to follow pre-defined
- *           Mobile Format - E.g. 91 9919819801
- *           Country code follow by space and 10 Digit Number
+/*@Purpose:: :As a User need to follow pre defined Password Rules
+ *Rule1 -  minimum 8 Characters - NOTE – All rules must be passed
  *@File:: User Registration Using Regex
  *@Author:: Shubham Raj
  */
@@ -21,6 +20,7 @@ public class UserRegistrationMain {
             System.out.println("Enter 2 : To validate Last Name ");
             System.out.println("Enter 3 : To validate E-mail ");
             System.out.println("Enter 4 : To validate Moblie Number ");
+            System.out.println("Enter 5 : To validate Password Rule 1 ");
 
             switch (scanner.nextInt()) {
                 case 0:
@@ -40,6 +40,13 @@ public class UserRegistrationMain {
                 case 4:
                     UserRegistration.validMobileNumber();
                     break;
+
+                case 5:
+                    UserRegistration.validPassRule1();
+                    break;
+
+                default:
+                    System.out.println("Select a valid number");
             }
         }
     }
