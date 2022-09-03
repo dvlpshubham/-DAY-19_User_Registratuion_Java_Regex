@@ -64,7 +64,7 @@ public class UserRegistration {
 
         System.out.print("Enter your Mobile Number : ");
         String phoneNo = scanner.nextLine();
-        String regex3 = "(91|0)?\\s?[6-9][0-9]{9}$";
+        String regex3 = "(91 )?[7-9][0-9]{9}";
         Pattern p3 = Pattern.compile(regex3);
         Matcher m3 = p3.matcher(phoneNo);
         boolean r3 = m3.matches();
